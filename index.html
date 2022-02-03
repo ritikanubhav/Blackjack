@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BlackJack</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Blackjack</h1>
+        <p id="message-el">Want to play a round?</p>
+        <p id="cards-el">Cards:</p>
+        <div  class="container" id="card-container"></div>
+        <p id="sum-el">Sum:</p>
+        <div class="btn-container">
+            <button id="start" onclick="startgame()">Start Game</button>
+            <button id="newcard" onclick="newcard()">New Card</button>
+        </div>
+        <p id="player-el"></p>
+        <div id="rules-el">
+            <h2>Rules</h2>
+            <ul>
+            <li>Get sum equals to 21 and you get a <b>Black jack</b>.</li>
+            <li>If sum is greater than 21 you are out of the game.</li>
+            <li>If sum is less than 21 you can take a new card.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

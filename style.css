@@ -1,0 +1,87 @@
+body{
+    font-family: 'Trebuchet Ms',Verdana,sans-serif,'Lucida Sans','Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    background-image:url(images/table.jpeg);
+    background-size:100vw 126vh;
+    color:white;
+    font-size:2rem;
+    display:flex;
+    flex-direction:column;
+    font-weight:bold;
+    margin:0;
+}  
+h1,h2{
+    text-align:center;
+    margin-top:0.1em;
+    margin-bottom:0.3em;
+    color:goldenrod;
+}
+.container{
+    margin:10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#card-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+img{
+    margin:5px;
+    width:110px;
+    height:150px;
+}
+#message-el{
+    text-align:center;
+    font-style: italic;
+}
+p{
+    margin:.85rem;
+}
+ul{
+    margin:0.1em;
+    font-size:0.9em;
+}
+li{
+    margin-bottom: 0.2em;
+    font-weight:600;
+}
+button{
+    color:#015F32;
+    width:170px;
+    font-size:1.5rem;
+    font-weight:bold;
+    padding:5px;
+    margin:5px;
+    background-color:goldenrod;
+    border:none;
+    border-radius:3px;
+}
+.btn-container{
+    display:flex;
+    flex:1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+@media only screen and (max-width:450px){
+    body{
+        font-size:1.42rem;
+        background-size:100vw 140vh;
+    }
+    #message-el {
+        margin:0;
+    }
+    .container{
+        margin:0;
+    }
+    p{
+        margin-top:0.4rem;
+    }
+    img{
+        margin:3px;
+        width:90px;
+        height:130px;
+    }
+}
