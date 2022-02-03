@@ -67,14 +67,16 @@ button{
 }
 @media only screen and (max-width:450px){
     body{
-        font-size:1.42rem;
+        font-size:1.8rem;
         background-size:100vw 140vh;
+        align-items:center;
     }
     #message-el {
         margin:0;
     }
     .container{
         margin:0;
+        max-width:95%;
     }
     p{
         margin-top:0.4rem;
