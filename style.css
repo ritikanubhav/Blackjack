@@ -65,10 +65,10 @@ button{
     justify-content: center;
 
 }
-@media only screen and (max-width:450px){
+@media only screen and (max-width:500px){
     body{
         font-size:1.8rem;
-        background-size:100vw 140vh;
+        background-size:100vw 145vh;
         align-items:center;
     }
     #message-el {
@@ -85,5 +85,8 @@ button{
         margin:3px;
         width:90px;
         height:130px;
+    }
+    .btn-container{
+        flex-direction: column;
     }
 }
