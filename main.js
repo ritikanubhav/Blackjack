@@ -41,33 +41,38 @@ function getRandomCard(){
 function rendergame()
 {
     rulesEl.style.display="none";
-    sumEl.textContent="Sum: "+sum;
     let cardlist="Cards:";
     let imagelist="";
     for(let i=0;i<cards.length;i++){
         cardlist+=" "+cards[i];
         imagelist+=renderCardImages[i];
     }
-    cardsEl.textContent=cardlist;
-    cardContainer.innerHTML=imagelist;
-    if(sum<=20)
+    setTimeout(function()
     {
-        message="Want to draw a new card?";
-    }
-    else if(sum===21)
-    {
-        message="You've got BlackJack!";
-        hasBlackjack=true;
-        player.chips*=2;
-    }
-    else
-    {
-        message="You're out of the game!";
-        isAlive=false;
-        player.chips=0;
-    }
-    messageEl.textContent=message;
-    playerEl.textContent=player.name+": $"+player.chips;
+        cardsEl.textContent=cardlist;
+        cardContainer.innerHTML=imagelist;
+        sumEl.textContent="Sum: "+sum;
+        if(sum<=20)
+        {
+            message="Want to draw a new card?";
+        }
+        else if(sum===21)
+        {
+            message="You've got BlackJack!";
+            hasBlackjack=true;
+            player.chips*=2;
+        }
+        else
+        {
+            message="You're out of the game!";
+            isAlive=false;
+            player.chips=0;
+        }
+        messageEl.textContent=message;
+        playerEl.textContent=player.name+": $"+player.chips;
+
+    }, 500);
+    
 }
 
 function startgame(){
