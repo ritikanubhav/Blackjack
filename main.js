@@ -40,7 +40,6 @@ function getRandomCard(){
 }
 function rendergame()
 {
-    rulesEl.style.display="none";
     let cardlist="Cards:";
     let imagelist="";
     for(let i=0;i<cards.length;i++){
@@ -49,6 +48,7 @@ function rendergame()
     }
     setTimeout(function()
     {
+        rulesEl.style.display="none";
         cardsEl.textContent=cardlist;
         cardContainer.innerHTML=imagelist;
         sumEl.textContent="Sum: "+sum;
