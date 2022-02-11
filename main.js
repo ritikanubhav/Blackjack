@@ -29,6 +29,7 @@ const images=[
 "<img  src='images/cardK.png' alt='cardK'>",
 "<img  src='images/cardQ.png' alt='cardQ'>",
 ]
+
 function getRandomCard(){
     let random=Math.ceil(Math.random()*13);
     let randomcard= [random];
@@ -46,11 +47,11 @@ function rendergame()
         cardlist+=" "+cards[i];
         imagelist+=renderCardImages[i];
     }
+    cardContainer.innerHTML=imagelist;
     setTimeout(function()
     {
         rulesEl.style.display="none";
         cardsEl.textContent=cardlist;
-        cardContainer.innerHTML=imagelist;
         sumEl.textContent="Sum: "+sum;
         if(sum<=20)
         {
