@@ -41,6 +41,7 @@ function getRandomCard(){
 }
 function rendergame()
 {
+    rulesEl.style.display="none";
     let cardlist="Cards:";
     let imagelist="";
     for(let i=0;i<cards.length;i++){
@@ -49,10 +50,8 @@ function rendergame()
     }
     cardContainer.innerHTML=`${imagelist}`;
     let lastCard=document.getElementById(`card${renderCardImages.length}`);
-    console.log(lastCard);
     lastCard.onload=function()
     {
-        rulesEl.style.display="none";
         cardsEl.textContent=cardlist;
         sumEl.textContent="Sum: "+sum;
         if(sum<=20)
