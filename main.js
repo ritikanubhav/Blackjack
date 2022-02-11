@@ -5,6 +5,8 @@ let player={
 let cards=[];
 let renderCardImages=[];
 let sum=0;
+let cardlist="";
+let imagelist="";
 let hasBlackjack=false;
 let isAlive=false;
 let message="";
@@ -42,17 +44,13 @@ function getRandomCard(){
 function rendergame()
 {
     rulesEl.style.display="none";
-    let cardlist="Cards:";
-    let imagelist="";
-    for(let i=0;i<cards.length;i++){
-        cardlist+=" "+cards[i];
-        imagelist+=renderCardImages[i];
-    }
+    cardsEl.textContent="Cards: ";
+    sumEl.textContent="Sum: ";
     cardContainer.innerHTML=`${imagelist}`;
     let lastCard=document.getElementById(`card${renderCardImages.length}`);
     lastCard.onload=function()
     {
-        cardsEl.textContent=cardlist;
+        cardsEl.textContent="Cards: "+cardlist;
         sumEl.textContent="Sum: "+sum;
         if(sum<=20)
         {
@@ -77,6 +75,8 @@ function rendergame()
 }
 
 function startgame(){
+    cardlist="";
+    imagelist="";
     let firstCard=getRandomCard();
     let secondCard=getRandomCard();
     let card1image=`<img id="card1" src="${imagesUrl[firstCard[0]-1]}">`;
@@ -84,6 +84,8 @@ function startgame(){
     cards=[firstCard[1],secondCard[1]];
     renderCardImages=[card1image,card2image];
     sum=firstCard[1]+secondCard[1];
+    cardlist+=" "+cards[0]+" "+cards[1];
+    imagelist+=renderCardImages[0]+renderCardImages[1];
     isAlive=true;
     hasBlackjack=false;
     player.chips=500;
@@ -97,6 +99,8 @@ function newcard(){
         cards.push(newcard[1]);
         renderCardImages.push(newcardimage);
         sum+=newcard[1];
+        cardlist+=" "+cards[cards.length-1];
+        imagelist+=renderCardImages[cards.length-1];
         rendergame();
     }
 }
