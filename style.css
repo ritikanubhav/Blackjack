@@ -3,7 +3,7 @@ body{
     background-image:url(images/table.jpeg);
     background-size:100vw 126vh;
     color:white;
-    font-size:2rem;
+    font-size:1.9rem;
     display:flex;
     flex-direction:column;
     font-weight:bold;
@@ -27,9 +27,9 @@ h1,h2{
     flex-wrap: wrap;
 }
 img{
-    margin:5px;
-    width:110px;
-    height:147px;
+    margin:3px;
+    width:90px;
+    height:130px;
 }
 #message-el{
     text-align:center;
@@ -60,7 +60,7 @@ button{
 }
 .btn-container{
     display:flex;
-    flex:1;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -68,7 +68,6 @@ button{
 }
 @media only screen and (max-width:550px){
     body{
-        font-size:1.8rem;
         background-size:100vw 140vh;
         align-items:center;
     }
@@ -81,13 +80,5 @@ button{
     }
     p{
         margin-top:0.4rem;
-    }
-    img{
-        margin:3px;
-        width:90px;
-        height:130px;
-    }
-    .btn-container{
-        flex-direction: column;
     }
 }
